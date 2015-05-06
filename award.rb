@@ -15,7 +15,7 @@ class Award
     when "Blue Distinction Plus"
       @type = BlueDistinctionPlus.new(expires_in, quality)
     when "Blue Star"
-      @type = BlueStar.new(expires_in)
+      @type = BlueStar.new(expires_in, quality)
     end
     @name = name
   end
