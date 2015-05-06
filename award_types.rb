@@ -50,3 +50,10 @@ class BlueCompare < NormalItem
   end
 
 end
+
+class BlueDistinctionPlus < NormalItem
+
+  def update
+  end
+
+end
