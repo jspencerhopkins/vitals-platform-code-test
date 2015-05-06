@@ -23,7 +23,6 @@ class NormalItem
 
 end
 
-# BlueFirst inherits NormalItem features
 class BlueFirst < NormalItem
 
   def update
@@ -54,6 +53,19 @@ end
 class BlueDistinctionPlus < NormalItem
 
   def update
+  end
+
+end
+
+class BlueStar < NormalItem
+
+  def update
+    @expires_in -= 1
+    if @expires_in <= 0
+      self.decrease_quality(4)
+    else
+      self.decrease_quality(2)
+    end
   end
 
 end
