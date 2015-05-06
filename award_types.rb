@@ -22,3 +22,14 @@ class NormalItem
   end
 
 end
+
+# BlueFirst inherits NormalItem features
+class BlueFirst < NormalItem
+
+  def update
+    @expires_in -= 1
+    self.increase_quality(1)
+    self.increase_quality(1) if @expires_in <= 0
+  end
+
+end
